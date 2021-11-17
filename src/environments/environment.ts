@@ -12,7 +12,7 @@ export const environment = {
     storageBucket: "zimtrivia.appspot.com",
     messagingSenderId: "186683260969",
     appId: "1:186683260969:web:ceb841f9fcc41dab179c38"
-    // add jwt token
+    // add jwt token here
   }
 };
 
