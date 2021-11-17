@@ -1,6 +1,7 @@
 export const environment = {
   production: true,
   config: {
+    // key goes here
     authDomain: "zimtrivia.firebaseapp.com",
     databaseURL: "https://zimtrivia-default-rtdb.firebaseio.com",
     projectId: "zimtrivia",
