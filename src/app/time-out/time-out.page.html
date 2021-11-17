@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <!-- <ion-title class="ion-text-center light-text header-title">TRIVIA</ion-title> -->
+    <img class="logo" src="../../assets/logo.jpg" />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div id="loader">
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <div id="line"></div>
+  </div>
+  <h4>Loader #5</h4>
+
+  <ion-row class="heading">
+    <div class="ion-text-center center">
+      <h1>Time up!</h1>
+    </div>
+  </ion-row>
+
+  <div>Points earned: </div>
+</ion-content>
+
+<ion-button expand="block" color="success" [routerLink]="['/play']"
+  >PLAY</ion-button
+>

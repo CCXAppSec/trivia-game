@@ -1,0 +1,221 @@
+html, body {
+  width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header {
+  display: block;
+  --background: #fff !important;
+  .light-text {
+    color: #fff;
+  }
+  .header-title {
+    font-size: 40px;
+    letter-spacing: 1rem;
+  }
+  
+}
+.logo{
+    width: 150px;
+    display: block;
+    height: auto;
+    margin: 10px auto;
+}
+
+.timer {
+  position: relative;
+  // top:z   -50px;
+  // left: 20%;
+}
+.progress-circle {
+  margin-top: 50px;
+  transform: rotate(-90deg);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.timer-text {
+  transform: rotate(90deg);
+  transform-origin: center;
+  font-size: 50px;
+  text-anchor: middle;
+  font-weight: 600;
+  color: #333;
+}
+.redtimer{
+  color: #E12A2A;
+  animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+.my-custom-menu {
+  --width: 500px;
+}
+
+ion-list {
+  padding: 4px 8px;
+}
+
+.list-ul {
+    margin: 40px auto 0;
+    width: 90%;
+  .list-items {
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px dotted #fff;
+  }
+  .clickeditem{
+    background: #469A49;
+    padding: 5px;
+    color: #fff;
+    
+  }
+}
+
+.gradient-border {
+    --borderWidth: 3px;
+    background: #ffffff;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+  .gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-2 * var(--borderWidth));
+    left: calc(-2 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 4);
+    width: calc(100% + var(--borderWidth) * 4);
+    background: linear-gradient(60deg, #469A49, #FAD02C, #E12A2A, #192A29);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  
+  
+  @keyframes animatedgradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+  
+  ion-content.background{
+    --background: url(../../assets/bg.jpg) 0 0px/100% 100% no-repeat;
+}
+  
+.points{
+  font-size: 30px;
+  font-weight: bolder;
+  color: #E12A2A;
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  margin-top: 20px;
+}
+
+.tap{
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  color: #333;
+}
+
+.redtimer{
+  color: #E12A2A;
+}
+
+
+ion-content {
+  width: 100vw;
+  position: absolute;
+  -background: #000;
+  --overflow: hidden !important;
+
+  .heading {
+    position: relative;
+    top: 50%;
+    text-align: center;
+
+    .center{
+        margin: auto;
+    }
+  }
+}
+ion-content h1 {
+//   background-color: #E42256;
+  margin: -5px 0px 0px 0px;
+  padding: 0px;
+  color: rgb(97, 97, 97);
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase
+}
+
+#loader {
+  animation: loader 5s cubic-bezier(.8,0,.2,1) infinite;
+  height: 40px;
+  width: 41px;
+  position: absolute;
+  top:calc(50% - 20px);
+  left:calc(50% - 20px);
+}
+@keyframes loader {
+  90% { transform: rotate(0deg); }
+  100% { transform: rotate(180deg); }
+}
+#top {
+  animation: top 5s linear infinite;
+  border-top: 20px solid #E12A2A;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  height: 0px;
+  width: 1px;
+  transform-origin: 50% 100%;
+}
+@keyframes top {
+  90% { transform: scale(0); }
+  100% { transform: scale(0);}
+}
+#bottom {
+  animation: bottom 5s linear infinite;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #E12A2A;
+  border-left: 20px solid transparent;
+  height: 0px;
+  width: 1px;
+  transform: scale(0);
+  transform-origin: 50% 100%;
+}
+@keyframes bottom {
+  10% { transform: scale(0); }
+  90% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+#line {
+  animation: line 5s linear infinite;
+  border-left: 1px dotted #E12A2A;
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+@keyframes line {
+  10% { height: 20px; }
+  100% { height: 20px; }
+}
