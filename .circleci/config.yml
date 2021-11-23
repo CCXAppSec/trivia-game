@@ -30,4 +30,4 @@ jobs:
 workflows:
   main:
     jobs:
-      - semgrep-scan --error
+      - semgrep-scan
