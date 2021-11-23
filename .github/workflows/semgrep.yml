@@ -20,6 +20,4 @@ jobs:
       with:
         config: >- 
           s/ccxappsec:exposed-secret-key 
-          p/security-audit
-          p/secrets
         publishToken: ${{ secrets.SEMGREP_APP_TOKEN }}
