@@ -1,9 +1,5 @@
 on:
-  pull_request:
-    branches:
-    - main
-    - master
-    - build
+  pull_request: {}
   push:
     branches:
     - main
