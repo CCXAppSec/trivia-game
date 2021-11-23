@@ -18,6 +18,8 @@ jobs:
     - uses: actions/checkout@v2
     - uses: returntocorp/semgrep-action@v1
       with:
-        config: s/ccxappsec:exposed-secret-key 
+        config: >- 
+          s/ccxappsec:exposed-secret-key 
+          p/security-audit
+          p/secrets
         publishToken: ${{ secrets.SEMGREP_APP_TOKEN }}
-        auditOn: push
